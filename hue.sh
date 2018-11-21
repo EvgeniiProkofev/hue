@@ -1,16 +1,16 @@
 #
-# $0 <group> on|off|status <brightness (percent)> <hash> <bridge_IP>"
+# $0 <hash> <bridge_IP> <group> <on|off|status> <brightness (percent)> "
 #
 
 # define connection hash and bridge IP
-hash=$4
-bridge=$5
+hash=$1
+bridge=$2
 
 
 # define input order
-group=$1
-state=$2
-bri=$3
+group=$3
+state=$4
+bri=$5
 
 
 # light groups
