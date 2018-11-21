@@ -1,10 +1,10 @@
 #
-# $0 <group> on|off|status <brightness (percent)>"
+# $0 <group> on|off|status <brightness (percent)> <hash> <bridge_IP>"
 #
 
 # define connection hash and bridge IP
-hash="YOUR_HASH_HERE"
-bridge="192.168.0.2"
+hash=$4
+bridge=$5
 
 
 # define input order
