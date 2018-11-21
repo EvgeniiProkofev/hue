@@ -13,29 +13,20 @@ state=$4
 bri=$5
 
 
-# light groups
-living="1"
-kitchen="2"
-office="3"
-bedroom="4"
-garage="5"
-outside="6"
-all="1 2 3 4 5 6"
+# light bulb
+first="1"
+second="2"
+third="3"
+all="1 2 3"
 
 
 # define lights
-if [ $group = "living" ]; then
-        lights="$living"
-elif [ $group = "kitchen" ]; then
-        lights="$kitchen"
-elif [ $group = "office" ]; then
-        lights="$office"
-elif [ $group = "bedroom" ]; then
-        lights="$bedroom"
-elif [ $group = "garage" ]; then
-        lights="$garage"
-elif [ $group = "outside" ]; then
-        lights="$outside"
+if [ $group = "first" ]; then
+        lights="$first"
+elif [ $group = "second" ]; then
+        lights="$second"
+elif [ $group = "third" ]; then
+        lights="$third"
 elif [ $group = "all" ]; then
         lights="$all"
 elif [ $group -eq $group ]; then
@@ -169,10 +160,10 @@ fi
 
 
 # perform action
-if [ $2 = "on" ]; then
+if [ $4 = "on" ]; then
         light_on
-elif [ $2 = "off" ]; then
+elif [ $4 = "off" ]; then
         light_off
-elif [ $2 = "status" ]; then
+elif [ $4 = "status" ]; then
         light_status
 fi
